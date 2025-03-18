@@ -1,0 +1,32 @@
+document.addEventListener('DOMContentLoaded', () => {
+  fetch('URL - api')
+    .then((response) => response.json())
+    .then((data) => {
+      const tabela = document.getElementById('tabela-corpo');
+      tabela.innerHTML = '';
+
+      data.forEach((contato) => {
+        const row = `
+                    <tr>
+                        <td>${contato.id}</td>
+                        <td>${contato.nome}</td>
+                        <td>${contato.disciplina}</td>
+                        <td>${contato.nota}</td>
+                        <td>
+                            <a href="#" class="Botao2" onclick="confirmarExclusao(${contato.id})">Excluir</a>
+                        </td>
+                    </tr>
+                `;
+        tabela.innerHTML += row;
+      });
+    })
+    .catch((error) => console.error('Erro ao carregar contatos:', error));
+});
+
+function confirmarExclusao(id) {
+  if (confirm('Deseja realmente excluir este contato?')) {
+    fetch(`URL - api/${id}`, { method: 'DELETE' })
+      .then(() => location.reload())
+      .catch((error) => console.error('Erro ao excluir contato:', error));
+  }
+}

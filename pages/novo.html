@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Página de Cadastro</title>
+  <link rel="icon" href="/images/favicon.ico" />
+  <link rel="stylesheet" href="/styles/style.css" />
+</head>
+
+<body>
+  <nav class="nav-bar">
+    <a href="../index.html">
+      <img src="/images/agenda-2.png" ondragstart="return false" oncontextmenu="return false;" />
+    </a>
+    <ul>
+      <li><a href="contatos.html">Contatos</a></li>
+      <li><a href="novo.html">Cadastrar Contato</a></li>
+      <li><a href="sobre.html">Sobre</a></li>
+    </ul>
+  </nav>
+
+  <section class="container">
+    <h1>Cadastrar novo aluno</h1>
+    <form id="formContato">
+      <table>
+        <tr>
+          <td>
+            <input type="text" id="nome" placeholder="Nome" class="Caixa1" required />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input type="text" id="disciplina" placeholder="Disciplina" class="Caixa2" required />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input type="text" id="nota" placeholder="Nota" class="Caixa1" required />
+          </td>
+        </tr>
+      </table>
+      <input type="submit" value="Adicionar" class="Botao1" />
+    </form>
+    <a href="./contatos.html" class="Botao-voltar">Voltar</a>
+  </section>
+  <script src="scripts/cadastro.js"></script>
+</body>
+
+</html>

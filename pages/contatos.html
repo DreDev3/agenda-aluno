@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Lista de Alunos</title>
+  <link rel="icon" href="/images/favicon.ico" />
+  <link rel="stylesheet" href="/styles/style.css" />
+</head>
+
+<body>
+  <nav class="nav-bar">
+    <a href="../index.html">
+      <img src="/images/agenda-2.png" ondragstart="return false" oncontextmenu="return false;" />
+    </a>
+    <ul>
+      <li><a href="contatos.html">Contatos</a></li>
+      <li><a href="novo.html">Cadastrar Contato</a></li>
+      <li><a href="sobre.html">Sobre</a></li>
+    </ul>
+  </nav>
+
+  <section class="container">
+    <h1>Agenda de Alunos</h1>
+
+    <table id="tabela">
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Nome</th>
+          <th>Nota</th>
+          <th>Disciplina</th>
+          <th>Excluir</th>
+        </tr>
+      </thead>
+      <tbody id="tabela-corpo">
+        <tr>
+          <td>1</td>
+          <td>Lucas</td>
+          <td>7.5</td>
+          <td>Programação Orientada a Objeto</td>
+          <td>
+            <a href="#" class="Botao2" onclick="confirmarExclusao()">Excluir</a>
+          </td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Fernando</td>
+          <td>5</td>
+          <td>Tecnologias para Internet</td>
+          <td>
+            <a href="#" class="Botao2" onclick="confirmarExclusao()">Excluir</a>
+          </td>
+        </tr>
+      </tbody>
+      <tbody id="tabela-corpo"></tbody>
+    </table>
+    <a href="/index.html" class="Botao-voltar">Voltar</a>
+  </section>
+  <script src="../scripts/contatos.js"></script>
+</body>
+
+</html>
