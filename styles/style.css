@@ -43,6 +43,7 @@ h1 {
   a {
     color: #F2F2F2;
     text-decoration: none;
+    transition: all 0.3s;
 
     &:hover {
       color: #262626;
