@@ -5,16 +5,16 @@ document
 
     const contato = {
       nome: document.getElementById('nome').value,
-      fone: document.getElementById('disciplina').value,
-      email: document.getElementById('nota').value,
+      disciplina: document.getElementById('disciplina').value,
+      nota: document.getElementById('nota').value,
     };
 
-    fetch('URL - api', {
+    fetch('http://localhost:8080/aluno/cadastrar', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(contato),
     })
-      .then((response) => response.json())
+      .then((response) => console.log( response.json()))
       .then(() => {
         alert('Contato cadastrado com sucesso!');
         window.location.href = 'contatos.html';
